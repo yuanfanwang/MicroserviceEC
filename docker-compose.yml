@@ -25,4 +25,4 @@ services:
     ports:
       - "5003:5003"
     volumes:
-      - .db/payment-data:/app
+      - .db/payment-db:/app/db
