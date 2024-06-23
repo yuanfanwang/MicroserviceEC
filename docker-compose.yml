@@ -13,10 +13,16 @@ services:
       - "5001:5001"
     depends_on:
       - product-domain
-    #   - payment-domain
-    #   - purchase-domain
+      - payment-domain
 
   product-domain:
     build: ./product-domain
     ports:
       - "5002:5002"
+
+  payment-domain:
+    build: ./payment-domain
+    ports:
+      - "5003:5003"
+    volumes:
+      - .db/payment-data:/app
