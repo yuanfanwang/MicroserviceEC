@@ -4,5 +4,19 @@ services:
     build: ./frontend
     ports:
       - "3000:3000"
-    # depends_on:
-    #   - api-layer
+    depends_on:
+      - api-layer
+
+  api-layer:
+    build: ./api-layer
+    ports:
+      - "5001:5001"
+    depends_on:
+      - product-domain
+    #   - payment-domain
+    #   - purchase-domain
+
+  product-domain:
+    build: ./product-domain
+    ports:
+      - "5002:5002"
