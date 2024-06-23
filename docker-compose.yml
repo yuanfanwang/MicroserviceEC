@@ -19,10 +19,12 @@ services:
     build: ./product-domain
     ports:
       - "5002:5002"
+    volumes:
+      - ./db/product:/app/db
 
   payment-domain:
     build: ./payment-domain
     ports:
       - "5003:5003"
     volumes:
-      - .db/payment-db:/app/db
+      - ./db/payment:/app/instance
