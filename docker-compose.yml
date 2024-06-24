@@ -5,7 +5,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - api-layer
+      - api-layer-frontend
 
   api-layer-frontend:
     build: ./api-layer-frontend
@@ -21,6 +21,8 @@ services:
       - "5002:5002"
     volumes:
       - ./db/product:/app/db
+    depends_on:
+      - api-layer-ai
 
   payment-domain:
     build: ./payment-domain
@@ -28,3 +30,17 @@ services:
       - "5003:5003"
     volumes:
       - ./db/payment:/app/instance
+    depends_on:
+      - api-layer-ai
+
+  api-layer-ai:
+    build: ./api-layer-ai
+    ports:
+      - "5004:5004"
+    depends_on:
+      - ai
+  
+  ai:
+    build: ./ai
+    ports:
+      - "5005:5005"
