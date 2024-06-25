@@ -1,0 +1,15 @@
+[submodule "ai-domain"]
+	path = ai-domain
+	url = git@github.com:yuanfanwang/ai-domain.git
+[submodule "api-layer-ai"]
+	path = api-layer-ai
+	url = git@github.com:yuanfanwang/api-layer-ai.git
+[submodule "api-layer-frontend"]
+	path = api-layer-frontend
+	url = git@github.com:yuanfanwang/api-layer-frontend.git
+[submodule "payment-domain"]
+	path = payment-domain
+	url = git@github.com:yuanfanwang/payment-domain.git
+[submodule "product-domain"]
+	path = product-domain
+	url = git@github.com:yuanfanwang/product-domain.git
