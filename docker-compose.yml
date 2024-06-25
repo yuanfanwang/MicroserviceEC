@@ -38,9 +38,9 @@ services:
     ports:
       - "5004:5004"
     depends_on:
-      - ai
+      - ai-domain
   
-  ai:
-    build: ./ai
+  ai-domain:
+    build: ./ai-domain
     ports:
       - "5005:5005"
