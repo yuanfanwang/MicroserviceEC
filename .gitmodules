@@ -13,3 +13,6 @@
 [submodule "product-domain"]
 	path = product-domain
 	url = git@github.com:yuanfanwang/product-domain.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:yuanfanwang/frontend.git
